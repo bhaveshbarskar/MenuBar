@@ -1,0 +1,96 @@
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style-type: none;
+  }
+
+  .menu-container {
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .menu-container li {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+  }
+  .menu-container li:last-child {
+    border-bottom: none;
+  }
+  .sub-list-container {
+    position: relative;
+    z-index: 1;
+  }
+  .sub-list-container ul {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    left: 300px;
+    top: 0px;
+    transition: all 0.3s linear;
+  }
+  .sub-list-container div:hover + ul,
+  .sub-list-container ul:hover {
+    opacity: 1;
+    z-index: 1;
+    left: 300px;
+  }
+</style>
+<ul class="menu-container">
+  <li class="sub-list-container">
+    <div>Big Four</div>
+    <ul>
+      <li>
+        Amazon
+      </li>
+      <li>
+        Google
+      </li>
+      <li>
+        Microsoft
+      </li>
+      <li>
+        Facebook
+      </li>
+    </ul>
+  </li>
+  <li class="sub-list-container">
+    <div>Service based</div>
+    <ul>
+      <li>
+        TCS
+      </li>
+      <li>
+        Infosys
+      </li>
+      <li>
+        Wipro
+      </li>
+      <li>
+        Accenture
+      </li>
+    </ul>
+  </li>
+  <li class="sub-list-container">
+    <div>Startups</div>
+    <ul>
+      <li>
+        Paytm
+      </li>
+      <li>
+        Smallcase
+      </li>
+      <li>
+        Freshworks
+      </li>
+      <li>
+        Hike
+      </li>
+    </ul>
+  </li>
+</ul>
